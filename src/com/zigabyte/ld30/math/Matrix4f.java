@@ -1,7 +1,10 @@
 
 package com.zigabyte.ld30.math;
 
-
+/**
+ * Used to represent a position and a rotation. It can be applied to a vector in order to transform the vector. The matrix can be rotated
+ * and the rotation is then applied to the vectors
+ */
 public class Matrix4f {
 
 	private float[] matrix = new float[4 * 4];
@@ -67,15 +70,15 @@ public class Matrix4f {
 		//result.z = matrix[2 + 0 * 4] * v.x + matrix[2 + 1 * 4] * v.y + matrix[2 + 2 * 4] * v.z;
 		Vector3f sub = new Vector3f(-matrix[0 + 3 * 4], -matrix[1 + 3 * 4], -matrix[2 + 3 * 4]);
 		result = v.add(sub);
-		
+
 		//result.x -= matrix[0 + 3 * 4];
 		//result.y -= matrix[1 + 3 * 4];
 		//result.z -= matrix[2 + 3 * 4];
-		
+
 		//result.x = matrix[0 + 0 * 4] * v.x + matrix[1 + 0 * 4] * v.y + matrix[2 + 0 * 4] * v.z;
 		//result.y = matrix[0 + 1 * 4] * v.x + matrix[1 + 1 * 4] * v.y + matrix[2 + 1 * 4] * v.z;
 		//result.z = matrix[0 + 2 * 4] * v.x + matrix[1 + 2 * 4] * v.y + matrix[2 + 2 * 4] * v.z;
-		
+
 		result.x = matrix[0 + 0 * 4] * result.x + matrix[1 + 0 * 4] * result.y + matrix[2 + 0 * 4] * result.z;
 		result.y = matrix[0 + 1 * 4] * result.x + matrix[1 + 1 * 4] * result.y + matrix[2 + 1 * 4] * result.z;
 		result.z = matrix[0 + 2 * 4] * result.x + matrix[1 + 2 * 4] * result.y + matrix[2 + 2 * 4] * result.z;

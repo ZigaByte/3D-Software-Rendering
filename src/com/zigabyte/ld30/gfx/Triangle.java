@@ -3,7 +3,7 @@ package com.zigabyte.ld30.gfx;
 
 import com.zigabyte.ld30.math.Vector3f;
 
-
+/** A set of 3 vertices and a color */
 public class Triangle {
 
 	private Vector3f v0;

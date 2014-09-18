@@ -15,7 +15,7 @@ import com.zigabyte.ld30.gfx.Bitmap3D;
 public class Main extends Canvas implements Runnable {
 
 	public static final int WIDTH = 800;
-	public static final int HEIGHT = 600;
+	public static final int HEIGHT = 800;
 
 	private boolean running = false;
 	private Thread thread;
